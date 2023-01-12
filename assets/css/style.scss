@@ -62,6 +62,11 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   flex-direction: row;
 }
 
+.flex-container-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .npc-flex-container {
   display: flex;
   align-items: baseline;
@@ -69,6 +74,54 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 .npc-field {
   flex: 1;
+}
+
+.collapsible {
+  background-color: transparent;
+  // color: white;
+  cursor: pointer;
+  padding: .5em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2em;
+}
+
+.collapsible-active, .collapsible:hover {
+  background-color: #6B4A8C;
+  color: white;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible::before {
+  content: '+';
+  font-size: 1em;
+  // color: white;
+  float: left;
+  margin-right: 1em;
+}
+
+.collapsible-active::before {
+  content: "-";
+  // color: white;
+}
+
+.padding-r10 {
+  padding-right: 10px;
+}
+
+.no-left-pad {
+  padding-left: 0;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
 }
 
 @media (max-width: 600px) {
